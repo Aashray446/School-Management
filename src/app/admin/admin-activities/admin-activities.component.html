@@ -1,0 +1,109 @@
+<div class="row" *ngIf="this.nav">
+  <div class="col-lg-6 mb-4">
+    <div class="card shadow mb-4">
+      <div class="card-header py-3">
+          <h6 class="text-primary font-weight-bold m-0">FACULTIES RELATED</h6>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <div class="row align-items-center no-gutters">
+              <div class="col mr-2">
+                  <h6 class="mb-0"><strong>HIRE EMPLOYEE</strong></h6><span class="text-xs">Employeee</span></div>
+              <div class="col-auto">
+                  <button class="btn btn-primary" (click)="this.toogle(1)">OPEN</button>
+              </div>
+          </div>
+      </li>
+      <li class="list-group-item">
+        <div class="row align-items-center no-gutters">
+            <div class="col mr-2">
+                <h6 class="mb-0"><strong>HIRE TEACHER</strong></h6><span class="text-xs">TEACHER</span></div>
+            <div class="col-auto">
+                <button class="btn btn-primary"  (click)="this.toogle(1)">OPEN</button>
+            </div>
+        </div>
+    </li>
+          <li class="list-group-item">
+              <div class="row align-items-center no-gutters">
+                  <div class="col mr-2">
+                      <h6 class="mb-0"><strong>SET TEAHERS ROUTINE</strong></h6><span class="text-xs">UPTO X</span></div>
+                  <div class="col-auto">
+                      <button class="btn btn-primary">OPEN ROUTINE</button>
+                  </div>
+              </div>
+          </li>
+          <li class="list-group-item">
+              <div class="row align-items-center no-gutters">
+                  <div class="col mr-2">
+                      <h6 class="mb-0"><strong>SET TEACHERS ROUTINE</strong></h6><span class="text-xs">ABOVE XI</span></div>
+                  <div class="col-auto">
+                    <button class="btn btn-primary">OPEN ROUTINE</button>
+                  </div>
+              </div>
+          </li>
+          <li class="list-group-item">
+            <div class="row align-items-center no-gutters">
+                <div class="col mr-2">
+                    <h6 class="mb-0"><strong>NOTICES</strong></h6><span class="text-xs">ONLY FACULTIES</span></div>
+                <div class="col-auto">
+                  <button class="btn btn-primary" (click)="this.toogle(2)">PUBLISH</button>
+                </div>
+            </div>
+        </li>
+      </ul>
+  </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="card shadow mb-4">
+      <div class="card-header py-3">
+          <h6 class="text-primary font-weight-bold m-0">STUDENT RELATED</h6>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <div class="row align-items-center no-gutters">
+                <div class="col mr-2">
+                    <h6 class="mb-0"><strong>NEW ADDMISSION FORM</strong></h6><span class="text-xs">NEW</span></div>
+                <div class="col-auto">
+                    <button class="btn btn-primary" (click)="this.toogle(0)">OPEN</button>
+                </div>
+            </div>
+        </li>
+          <li class="list-group-item">
+              <div class="row align-items-center no-gutters">
+                  <div class="col mr-2">
+                      <h6 class="mb-0"><strong>ADD NEW EVENT</strong></h6><span class="text-xs">NEW</span></div>
+                  <div class="col-auto">
+                      <button class="btn btn-primary" (click)="this.toogle(4)">ADD</button>
+                  </div>
+              </div>
+          </li>
+          <li class="list-group-item">
+              <div class="row align-items-center no-gutters">
+                  <div class="col mr-2">
+                      <h6 class="mb-0"><strong>NOTICES</strong></h6><span class="text-xs">ALL</span></div>
+                  <div class="col-auto">
+                    <button class="btn btn-primary"  (click)="this.toogle(2)">ANNOUNCE</button>
+                  </div>
+              </div>
+          </li>
+          <li class="list-group-item">
+            <div class="row align-items-center no-gutters">
+                <div class="col mr-2">
+                    <h6 class="mb-0"><strong>PUBLISH RESULT</strong></h6><span class="text-xs"></span></div>
+                <div class="col-auto">
+                  <button class="btn btn-primary"  (click)="this.toogle(3)">PUBLISH</button>
+                </div>
+            </div>
+        </li>
+      </ul>
+  </div>
+  </div>
+</div>
+<div class="mx-auto" style="width: 200px;">
+  <button class="btn btn-outline-primary btn-lg" *ngIf="!(this.nav)" (click)="this.close()">&#10005;</button>
+</div>
+<app-student-adm-form *ngIf="this.adm"></app-student-adm-form>
+<app-teacher-hire-form *ngIf="this.teach"></app-teacher-hire-form>
+<app-notices *ngIf="this.noti"></app-notices>
+<app-result *ngIf="this.resu"></app-result>
+<app-events *ngIf="this.eve"></app-events>

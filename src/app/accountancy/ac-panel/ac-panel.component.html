@@ -1,0 +1,166 @@
+<div class="container-fluid">
+  <div class="d-sm-flex justify-content-between align-items-center mb-4">
+      <h3 class="text-dark mb-0">ACCOUNTANT DASHBOARD</h3><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a></div>
+  <div class="row">
+      <div class="col-md-6 col-xl-3 mb-4">
+          <div class="card shadow border-left-primary py-2">
+              <div class="card-body">
+                  <div class="row align-items-center no-gutters">
+                      <div class="col mr-2 btn btn-primary">
+                          <div class="text-uppercase text-white font-weight-bold text-xs mb-1"><span>INVOICE GENERATION</span></div>
+                      </div>
+                      <div class="col-auto"><i class="fas fa-file-invoice fa-2x text-gray-300"></i></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-6 col-xl-3 mb-4">
+          <div class="card shadow border-left-success py-2">
+              <div class="card-body">
+                  <div class="row align-items-center no-gutters">
+                      <div class="col mr-2 btn btn-primary">
+                          <div class="text-uppercase text-white font-weight-bold text-xs mb-1"><span>PAYROLL MANAGEMENT</span></div>
+                      </div>
+                      <div class="col-auto"><i class="fas fa-dollar-sign fa-2x text-gray-300"></i></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-6 col-xl-3 mb-4">
+          <div class="card shadow border-left-info py-2">
+              <div class="card-body">
+                  <div class="row align-items-center no-gutters">
+                      <div class="col mr-2 btn btn-primary">
+                          <div class="text-uppercase text-warning font-weight-bold text-xs mb-1"><span>FEES COLLECTION</span></div>
+                      </div>
+                      <div class="col-auto"><i class="fas fa-money-check-alt fa-2x text-gray-300"></i></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-6 col-xl-3 mb-4">
+          <div class="card shadow border-left-warning py-2">
+              <div class="card-body">
+                  <div class="row align-items-center no-gutters">
+                      <div class="col mr-2 btn btn-primary">
+                          <div class="text-uppercase text-warning font-weight-bold text-xs mb-1"><span>UPDATE</span></div>
+                          <div class="text-dark font-weight-bold h5 mb-0"><span></span></div>
+                      </div>
+                      <div class="col-auto"><i class="fas fa-edit fa-2x text-gray-300"></i></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-lg-7 col-xl-8">
+          <div class="card shadow mb-4">
+              <div class="card-header d-flex justify-content-between align-items-center">
+                  <h6 class="text-primary font-weight-bold m-0">Recent Transactions</h6>
+                  <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
+                      <div class="dropdown-menu shadow dropdown-menu-right animated--fade-in"
+                          role="menu">
+                          <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" role="presentation" href="#"> Action</a><a class="dropdown-item" role="presentation" href="#"> Another action</a>
+                          <div class="dropdown-divider"></div><a class="dropdown-item" role="presentation" href="#"> Something else here</a></div>
+                  </div>
+              </div>
+              <!---------------RECENT TRANSACTIONS --------------------------------------------------->
+              <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 text-nowrap">
+                        <div id="dataTable_length" class="dataTables_length" aria-controls="dataTable"><label>Show <select class="form-control form-control-sm custom-select custom-select-sm"><option value="10" selected>10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></label></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-md-right dataTables_filter" id="dataTable_filter"><label><input type="search" class="form-control form-control-sm" aria-controls="dataTable" placeholder="Search" /></label></div>
+                    </div>
+                </div>
+                <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
+                    <table class="table dataTable my-0" id="dataTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>DEBIT</th>
+                                <th>CREDIT</th>
+                                <th>summary</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>458</td>
+                                <td>NRS.2000</td>
+                                <td>****</td>
+                                <td>Table Purchase</td>
+                                <td>2008/11/28</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                          <tr>
+                            <th>ID</th>
+                            <th>DEBIT</th>
+                            <th>CREDIT</th>
+                            <th>summary</th>
+                            <th>Date</th>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 align-self-center">
+                        <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Showing 1 to 10 of 27</p>
+                    </div>
+                    <div class="col-md-6">
+                        <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
+                            <ul class="pagination">
+                                <li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-lg-6">
+        <div class="card shadow mb-4">
+          <div class="card-header py-3">
+              <h6 class="text-primary font-weight-bold m-0">Generate Report</h6>
+          </div>
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                  <div class="row align-items-center no-gutters">
+                      <div class="col mr-2">
+                          <h6 class="mb-0"><strong>Season Summary</strong></h6><span class="text-xs">10:30 AM</span></div>
+                      <div class="col-auto">
+                          <button class="btn btn-primary">Generate</button>
+                      </div>
+                  </div>
+              </li>
+              <li class="list-group-item">
+                  <div class="row align-items-center no-gutters">
+                      <div class="col mr-2">
+                          <h6 class="mb-0"><strong>Monthly Report</strong></h6><span class="text-xs">11:30 AM</span></div>
+                      <div class="col-auto">
+                        <button class="btn btn-primary">Generate</button>
+                      </div>
+                  </div>
+              </li>
+              <li class="list-group-item">
+                <div class="row align-items-center no-gutters">
+                    <div class="col mr-2">
+                        <h6 class="mb-0"><strong>Financial Summary</strong></h6><span class="text-xs">11:30 AM</span></div>
+                    <div class="col-auto">
+                      <button class="btn btn-primary">Generate</button>
+                    </div>
+                </div>
+            </li>
+          </ul>
+      </div>
+      </div>
+  </div>
+</div>
